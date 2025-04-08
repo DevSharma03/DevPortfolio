@@ -1,0 +1,581 @@
+<<<<<<< HEAD
+/* Text Colors */
+.text-blue-700 {
+    color: #007BFF; 
+}
+
+.text-grey-500 {
+    color: #90969b;
+}
+
+/* Reset Body */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Home Section - Keep Background Fixed */
+#Home {
+    background-image: url('../../assets/bg-home.png');
+    background-size: cover;
+    background-position: center top;
+    background-color: rgba(37, 88, 171, 0.05);
+    height: 110vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+/* Home Content - Centered but Left-Aligned */
+.home-main {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Text Content - Left-Aligned & Stable */
+.home-main .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Left Column - Text Section */
+.home-main .col-6 {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Typing Cursor */
+.blink {
+    animation: blink 0.8s infinite;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: left;
+}
+
+.resume-button {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.resume-button a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+}
+
+/* Background hover animation */
+.resume-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: left 0.3s ease-in-out;
+}
+
+/* On hover, slide the effect */
+.resume-button:hover::before {
+    left: 0;
+}
+
+/* Scale effect on hover */
+.resume-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.5);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: left;
+    padding: 5px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Common Styles */
+.icon-link {
+    padding: 12px;
+    border-radius: 28px 28px 28px 0px;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Icon Variants */
+.icon-link-1 {
+    border: 2px solid #007bff !important;
+    color: #007bff !important;
+    background: transparent !important;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3) !important;
+}
+
+.icon-link-2 {
+    border: 2px solid black !important;
+    color: black !important;
+    background: transparent !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+.icon-link-3 {
+    border: 2px solid #18e4ff !important;
+    color: #18e4ff !important;
+    background: transparent !important;
+    box-shadow: 0 4px 10px rgba(24, 228, 255, 0.3) !important;
+}
+
+.icon-link-4 {
+    border: 2px solid #f51686 !important;
+    color: #f51686 !important;
+    background: transparent !important;
+    box-shadow: 0 4px 10px rgba(245, 22, 134, 0.3)  !important;
+}
+
+.icon-link-5 {
+    border: 2px solid #ff0000 !important;
+    color: #ff0000 !important;
+    background: transparent !important;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3) !important;
+}
+
+/* Hover Effects */
+.icon-link:hover {
+    transform: scale(1.1);
+    color: white !important;
+}
+
+.icon-link-1:hover {
+    background: #007bff !important;
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.5) !important;
+}
+
+.icon-link-2:hover {
+    background: black !important;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5) !important;
+}
+
+.icon-link-3:hover {
+    background: #18e4ff !important;
+    box-shadow: 0 6px 15px rgba(24, 228, 255, 0.5) !important;
+}
+
+.icon-link-4:hover {
+    background: #f51686 !important;
+    box-shadow: 0 6px 15px rgba(245, 22, 134, 0.5) !important;
+}
+
+.icon-link-5:hover {
+    background: #ff0000 !important;
+    box-shadow: 0 6px 15px rgba(255, 0, 0, 0.5) !important;
+}
+
+.icon {
+    font-size: 24px;
+}
+
+.home-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.home-image::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: #ffc508;
+    border-radius: 20px;
+    transform: rotate(20deg);
+    z-index: -1;
+}
+
+.home-image-me {
+    position: relative;
+    width: 280px;
+    height: auto;
+    z-index: 2;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-image-me:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* RESPONSIVE DESIGN */
+
+/* For Medium Screens (Tablets) */
+@media (max-width: 992px) {
+    #Home {
+        padding-top: 100px;  /* Add top margin on medium devices */
+        padding: 0 10px;
+    }
+    .home-main {
+        max-width: 90%;
+        text-align: center;
+    }
+    .home-main .row {
+        flex-direction: column;
+    }
+    .home-main .col-6 {
+        text-align: center;
+    }
+    .home-image-me {
+        width: 230px;
+    }
+}
+
+/* For Small Screens (Phones) */
+@media (max-width: 768px) {
+    #Home {
+        padding-top: 50px !important;  /* Add top margin on small devices */
+    }
+    .home-main {
+        text-align: center;
+    }
+    .home-main .col-6 {
+        text-align: center;
+    }
+    .home-image {
+        height: 300px;
+    }
+    .home-image-me {
+        width: 200px;
+    }
+
+    /* Mobile Version - Keep same shape behind the image */
+    .home-image::before {
+        width: 300px;  /* Keep the same width */
+        height: 300px;  /* Keep the same height */
+        transform: rotate(20deg);  /* Keep the same rotation */
+    }
+}
+
+=======
+/* Text Colors */
+.text-blue-700 {
+    color: #007BFF; 
+}
+
+.text-grey-500 {
+    color: #90969b;
+}
+
+/* Reset Body */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Home Section - Keep Background Fixed */
+#Home {
+    background-image: url('../../assets/bg-home.png');
+    background-size: cover;
+    background-position: center top;
+    background-color: rgba(37, 88, 171, 0.05);
+    height: 110vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+/* Home Content - Centered but Left-Aligned */
+.home-main {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Text Content - Left-Aligned & Stable */
+.home-main .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Left Column - Text Section */
+.home-main .col-6 {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Typing Cursor */
+.blink {
+    animation: blink 0.8s infinite;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: left;
+}
+
+.resume-button {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.resume-button a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+}
+
+/* Background hover animation */
+.resume-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: left 0.3s ease-in-out;
+}
+
+/* On hover, slide the effect */
+.resume-button:hover::before {
+    left: 0;
+}
+
+/* Scale effect on hover */
+.resume-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.5);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: left;
+    padding: 5px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Common Styles */
+.icon-link {
+    padding: 12px;
+    border-radius: 28px 28px 28px 0px;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Icon Variants */
+.icon-link-1 {
+    border: 2px solid #007bff !important;
+    color: #007bff !important;
+    background: transparent !important;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3) !important;
+}
+
+.icon-link-2 {
+    border: 2px solid black !important;
+    color: black !important;
+    background: transparent !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+.icon-link-3 {
+    border: 2px solid #18e4ff !important;
+    color: #18e4ff !important;
+    background: transparent !important;
+    box-shadow: 0 4px 10px rgba(24, 228, 255, 0.3) !important;
+}
+
+.icon-link-4 {
+    border: 2px solid #f51686 !important;
+    color: #f51686 !important;
+    background: transparent !important;
+    box-shadow: 0 4px 10px rgba(245, 22, 134, 0.3)  !important;
+}
+
+.icon-link-5 {
+    border: 2px solid #ff0000 !important;
+    color: #ff0000 !important;
+    background: transparent !important;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3) !important;
+}
+
+/* Hover Effects */
+.icon-link:hover {
+    transform: scale(1.1);
+    color: white !important;
+}
+
+.icon-link-1:hover {
+    background: #007bff !important;
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.5) !important;
+}
+
+.icon-link-2:hover {
+    background: black !important;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5) !important;
+}
+
+.icon-link-3:hover {
+    background: #18e4ff !important;
+    box-shadow: 0 6px 15px rgba(24, 228, 255, 0.5) !important;
+}
+
+.icon-link-4:hover {
+    background: #f51686 !important;
+    box-shadow: 0 6px 15px rgba(245, 22, 134, 0.5) !important;
+}
+
+.icon-link-5:hover {
+    background: #ff0000 !important;
+    box-shadow: 0 6px 15px rgba(255, 0, 0, 0.5) !important;
+}
+
+.icon {
+    font-size: 24px;
+}
+
+.home-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.home-image::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: #ffc508;
+    border-radius: 20px;
+    transform: rotate(20deg);
+    z-index: -1;
+}
+
+.home-image-me {
+    position: relative;
+    width: 280px;
+    height: auto;
+    z-index: 2;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-image-me:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* RESPONSIVE DESIGN */
+
+/* For Medium Screens (Tablets) */
+@media (max-width: 992px) {
+    #Home {
+        padding-top: 100px;  /* Add top margin on medium devices */
+        padding: 0 10px;
+    }
+    .home-main {
+        max-width: 90%;
+        text-align: center;
+    }
+    .home-main .row {
+        flex-direction: column;
+    }
+    .home-main .col-6 {
+        text-align: center;
+    }
+    .home-image-me {
+        width: 230px;
+    }
+}
+
+/* For Small Screens (Phones) */
+@media (max-width: 768px) {
+    #Home {
+        padding-top: 50px !important;  /* Add top margin on small devices */
+    }
+    .home-main {
+        text-align: center;
+    }
+    .home-main .col-6 {
+        text-align: center;
+    }
+    .home-image {
+        height: 300px;
+    }
+    .home-image-me {
+        width: 200px;
+    }
+
+    /* Mobile Version - Keep same shape behind the image */
+    .home-image::before {
+        width: 300px;  /* Keep the same width */
+        height: 300px;  /* Keep the same height */
+        transform: rotate(20deg);  /* Keep the same rotation */
+    }
+}
+
+>>>>>>> 19ff24ce4b5858cdb8d4e612d62c839c795eaced

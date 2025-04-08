@@ -1,0 +1,335 @@
+<<<<<<< HEAD
+/* About Section */
+#about {
+    padding: 70px 0;
+    position: relative;
+}
+
+/* About Container */
+.about-container {
+    max-width: 100%;
+    margin: auto;
+    padding: 0px 100px;
+}
+
+/* Row Flex Alignment */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Left Section - Profile Image */
+.about-image {
+    position: relative;
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image Wrapper */
+.image-wrapper {
+    position: relative;
+    width: 550px;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Profile Image Wrapper with Background */
+.profile-image-wrapper {
+    position: relative;
+    width: 120%;
+    height: 120%;
+    background: url("../../assets/clip-transparent-shapes-15.png") no-repeat center center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Profile Image */
+.profile-image-me {
+    width: 450px;
+    height: 450px;
+    object-fit: contain;
+    position: relative;
+    top: -10px !important;
+}
+
+/* Right Section - About Text */
+.about-text {
+    flex: 0 0 50%;
+    padding: 25px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* About Title */
+.about-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2e3d48;
+    margin-bottom: 20px;
+}
+
+/* Highlighted Text */
+.highlight {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Connect Me Button */
+.resume-button {
+    width: 250px;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.connect-me-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-wrapper {
+        width: 450px;
+        height: 450px;
+    }
+
+    .profile-image-me {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        max-width: 100%;
+        margin: auto;
+        padding: 0px 20px;
+    }
+
+    .image-wrapper {
+        width: 500px;
+        height: 500px;
+    }
+
+    .profile-image-me {
+        width: 260px;
+        height: 280px;
+    }
+
+    .connect-me-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-text{
+        align-items: center;
+    }
+
+    .image-wrapper {
+        width: 450px;
+        height: 450px;
+    }
+
+    .profile-image-me {
+        width: 260px;
+        height: 280px;
+    }
+
+    .connect-me-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+=======
+/* About Section */
+#about {
+    padding: 70px 0;
+    position: relative;
+}
+
+/* About Container */
+.about-container {
+    max-width: 100%;
+    margin: auto;
+    padding: 0px 100px;
+}
+
+/* Row Flex Alignment */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Left Section - Profile Image */
+.about-image {
+    position: relative;
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image Wrapper */
+.image-wrapper {
+    position: relative;
+    width: 550px;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Profile Image Wrapper with Background */
+.profile-image-wrapper {
+    position: relative;
+    width: 120%;
+    height: 120%;
+    background: url("../../assets/clip-transparent-shapes-15.png") no-repeat center center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Profile Image */
+.profile-image-me {
+    width: 450px;
+    height: 450px;
+    object-fit: contain;
+    position: relative;
+    top: -10px !important;
+}
+
+/* Right Section - About Text */
+.about-text {
+    flex: 0 0 50%;
+    padding: 25px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* About Title */
+.about-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2e3d48;
+    margin-bottom: 20px;
+}
+
+/* Highlighted Text */
+.highlight {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Connect Me Button */
+.resume-button {
+    width: 250px;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.connect-me-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-wrapper {
+        width: 450px;
+        height: 450px;
+    }
+
+    .profile-image-me {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        max-width: 100%;
+        margin: auto;
+        padding: 0px 20px;
+    }
+
+    .image-wrapper {
+        width: 500px;
+        height: 500px;
+    }
+
+    .profile-image-me {
+        width: 260px;
+        height: 280px;
+    }
+
+    .connect-me-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-text{
+        align-items: center;
+    }
+
+    .image-wrapper {
+        width: 450px;
+        height: 450px;
+    }
+
+    .profile-image-me {
+        width: 260px;
+        height: 280px;
+    }
+
+    .connect-me-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+>>>>>>> 19ff24ce4b5858cdb8d4e612d62c839c795eaced

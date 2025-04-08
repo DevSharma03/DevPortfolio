@@ -1,0 +1,613 @@
+<<<<<<< HEAD
+.projects-container {
+    text-align: center;
+    margin: 40px;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    perspective: 1200px;
+    /* Increased perspective for depth */
+    text-decoration: none;
+}
+
+.project-card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
+}
+
+.project-card:hover .project-card-inner {
+    transform: rotateY(180deg);
+}
+
+.project-card-front,
+.project-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.project-card-front {
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    /* Subtle shadow */
+}
+
+.project-card-front img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card-front:hover img {
+    transform: scale(1.1);
+    /* Slight zoom on image */
+}
+
+.project-details {
+    padding: 20px;
+    text-align: left;
+    /* Text alignment changed to left */
+    color: #333;
+    /* Dark text for readability */
+}
+
+.project-details h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+    color: #222;
+}
+
+.project-details p {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.project-card-back {
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 123, 255, 0.3);
+    color: black;
+    transform: rotateY(180deg);
+    padding: 15px;
+}
+
+/* Add margin to the heading for spacing */
+.project-card-back .project-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 15px; /* Added space below heading */
+    text-align: center;
+}
+
+.project-card-back .project-description {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.project-card-back .teckStack{
+    margin-top: 5px;
+    color: rgb(13, 178, 255)
+}
+
+/* Ensures the "Click to View Project" section stays at the bottom */
+.project-card-back .overlay {
+    text-align: center;
+    margin-top: auto; /* Pushes overlay to the bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 10px; /* Added padding for spacing */
+}
+
+.project-card:hover .project-card-back {
+    background: #ffffff;
+    /* Keep the white background */
+    box-shadow: 0 8px 24px rgba(0, 123, 255, 0.5);
+    /* Slightly darker blue shadow on hover */
+}
+
+.overlay {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the overlay text */
+    align-items: center; /* Center the overlay text */
+    margin-top: auto;
+}
+
+.overlay h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+
+
+/* Ensures "Click to View Project" remains centered and positioned properly */
+.overlay span {
+    font-size: 18px;
+    font-weight: 500;
+    color: #007bff;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.project-card:hover .overlay span {
+    opacity: 1;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.overlay a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.overlay a:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}
+
+/* Responsive Design for Mobile and Tablet */
+@media (max-width: 768px) {
+    .projects {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center; /* Center the projects for better alignment */
+    }
+
+    .project-card {
+        width: 90%; /* Make the cards wider on smaller screens */
+        height: 350px; /* Adjust card height for mobile */
+        margin-bottom: 15px; /* Add space between cards */
+    }
+
+    .project-card-inner {
+        transform: scale(0.95); /* Slightly scale down the card on smaller screens */
+    }
+
+    .project-details {
+        text-align: center; /* Center the text for better mobile alignment */
+        padding: 10px; /* Add some padding for spacing */
+    }
+
+    .project-details h3 {
+        font-size: 18px; /* Adjust font size for mobile */
+        margin-bottom: 10px; /* Add spacing between title and description */
+    }
+
+    .project-details p {
+        font-size: 14px; /* Adjust font size for better readability */
+    }
+
+    .project-card-back .project-name {
+        font-size: 20px; /* Adjust project name size */
+        margin-bottom: 12px; /* Add margin for better spacing */
+    }
+
+    .overlay {
+        text-align: center; /* Center the overlay text on mobile */
+        padding: 10px;
+    }
+
+    .overlay h3 {
+        font-size: 18px; /* Adjust overlay heading size */
+        margin-bottom: 12px; /* Add spacing */
+    }
+
+    .overlay p {
+        font-size: 14px; /* Adjust text size */
+        margin-bottom: 15px;
+    }
+
+    .overlay a {
+        font-size: 16px; /* Adjust button text size */
+        padding: 10px 18px; /* Adjust padding to fit smaller screen */
+    }
+
+    .project-card-front img {
+        height: 200px; /* Adjust image height for better fit on mobile */
+        object-fit: cover;
+    }
+
+    .project-card:hover .project-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .project-card:hover .overlay span {
+        opacity: 1;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects {
+        gap: 15px; /* Reduce the gap between cards for tighter layout */
+    }
+
+    .project-card {
+        width: 100%; /* Ensure the card takes full width on smaller screens */
+        height: 280px; /* Adjust card height */
+    }
+
+    .project-card-inner {
+        transform: scale(0.9); /* Scale down slightly more on very small screens */
+    }
+
+    .overlay a {
+        font-size: 14px; /* Adjust button text size */
+        padding: 8px 16px; /* Adjust padding */
+    }
+
+    .project-details h3 {
+        font-size: 16px; /* Adjust heading font size */
+    }
+
+    .project-details p {
+        font-size: 12px; /* Adjust paragraph font size */
+    }
+
+    .overlay h3 {
+        font-size: 16px; /* Adjust overlay heading font size */
+    }
+
+    .overlay p {
+        font-size: 12px; /* Adjust overlay description font size */
+    }
+
+    .project-card-front img {
+        height: 180px; /* Adjust image height for mobile screens */
+    }
+
+    .overlay {
+        padding: 5px; /* Reduce padding for smaller screens */
+    }
+}
+
+=======
+.projects-container {
+    text-align: center;
+    margin: 40px;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    perspective: 1200px;
+    /* Increased perspective for depth */
+    text-decoration: none;
+}
+
+.project-card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
+}
+
+.project-card:hover .project-card-inner {
+    transform: rotateY(180deg);
+}
+
+.project-card-front,
+.project-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.project-card-front {
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    /* Subtle shadow */
+}
+
+.project-card-front img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card-front:hover img {
+    transform: scale(1.1);
+    /* Slight zoom on image */
+}
+
+.project-details {
+    padding: 20px;
+    text-align: left;
+    /* Text alignment changed to left */
+    color: #333;
+    /* Dark text for readability */
+}
+
+.project-details h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+    color: #222;
+}
+
+.project-details p {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.project-card-back {
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 123, 255, 0.3);
+    color: black;
+    transform: rotateY(180deg);
+    padding: 15px;
+}
+
+/* Add margin to the heading for spacing */
+.project-card-back .project-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 15px; /* Added space below heading */
+    text-align: center;
+}
+
+.project-card-back .project-description {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.project-card-back .teckStack{
+    margin-top: 5px;
+    color: rgb(13, 178, 255)
+}
+
+/* Ensures the "Click to View Project" section stays at the bottom */
+.project-card-back .overlay {
+    text-align: center;
+    margin-top: auto; /* Pushes overlay to the bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 10px; /* Added padding for spacing */
+}
+
+.project-card:hover .project-card-back {
+    background: #ffffff;
+    /* Keep the white background */
+    box-shadow: 0 8px 24px rgba(0, 123, 255, 0.5);
+    /* Slightly darker blue shadow on hover */
+}
+
+.overlay {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the overlay text */
+    align-items: center; /* Center the overlay text */
+    margin-top: auto;
+}
+
+.overlay h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+
+
+/* Ensures "Click to View Project" remains centered and positioned properly */
+.overlay span {
+    font-size: 18px;
+    font-weight: 500;
+    color: #007bff;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.project-card:hover .overlay span {
+    opacity: 1;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.overlay a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.overlay a:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}
+
+/* Responsive Design for Mobile and Tablet */
+@media (max-width: 768px) {
+    .projects {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center; /* Center the projects for better alignment */
+    }
+
+    .project-card {
+        width: 90%; /* Make the cards wider on smaller screens */
+        height: 350px; /* Adjust card height for mobile */
+        margin-bottom: 15px; /* Add space between cards */
+    }
+
+    .project-card-inner {
+        transform: scale(0.95); /* Slightly scale down the card on smaller screens */
+    }
+
+    .project-details {
+        text-align: center; /* Center the text for better mobile alignment */
+        padding: 10px; /* Add some padding for spacing */
+    }
+
+    .project-details h3 {
+        font-size: 18px; /* Adjust font size for mobile */
+        margin-bottom: 10px; /* Add spacing between title and description */
+    }
+
+    .project-details p {
+        font-size: 14px; /* Adjust font size for better readability */
+    }
+
+    .project-card-back .project-name {
+        font-size: 20px; /* Adjust project name size */
+        margin-bottom: 12px; /* Add margin for better spacing */
+    }
+
+    .overlay {
+        text-align: center; /* Center the overlay text on mobile */
+        padding: 10px;
+    }
+
+    .overlay h3 {
+        font-size: 18px; /* Adjust overlay heading size */
+        margin-bottom: 12px; /* Add spacing */
+    }
+
+    .overlay p {
+        font-size: 14px; /* Adjust text size */
+        margin-bottom: 15px;
+    }
+
+    .overlay a {
+        font-size: 16px; /* Adjust button text size */
+        padding: 10px 18px; /* Adjust padding to fit smaller screen */
+    }
+
+    .project-card-front img {
+        height: 200px; /* Adjust image height for better fit on mobile */
+        object-fit: cover;
+    }
+
+    .project-card:hover .project-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .project-card:hover .overlay span {
+        opacity: 1;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects {
+        gap: 15px; /* Reduce the gap between cards for tighter layout */
+    }
+
+    .project-card {
+        width: 100%; /* Ensure the card takes full width on smaller screens */
+        height: 280px; /* Adjust card height */
+    }
+
+    .project-card-inner {
+        transform: scale(0.9); /* Scale down slightly more on very small screens */
+    }
+
+    .overlay a {
+        font-size: 14px; /* Adjust button text size */
+        padding: 8px 16px; /* Adjust padding */
+    }
+
+    .project-details h3 {
+        font-size: 16px; /* Adjust heading font size */
+    }
+
+    .project-details p {
+        font-size: 12px; /* Adjust paragraph font size */
+    }
+
+    .overlay h3 {
+        font-size: 16px; /* Adjust overlay heading font size */
+    }
+
+    .overlay p {
+        font-size: 12px; /* Adjust overlay description font size */
+    }
+
+    .project-card-front img {
+        height: 180px; /* Adjust image height for mobile screens */
+    }
+
+    .overlay {
+        padding: 5px; /* Reduce padding for smaller screens */
+    }
+}
+
+>>>>>>> 19ff24ce4b5858cdb8d4e612d62c839c795eaced
