@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/DevPortfolio/static/css/main.ed659a5f.css",
+    "main.js": "/DevPortfolio/static/js/main.c2187248.js",
+    "static/js/488.ee0639e6.chunk.js": "/DevPortfolio/static/js/488.ee0639e6.chunk.js",
+    "static/media/EventPro.png": "/DevPortfolio/static/media/EventPro.1b99416639a037316c0e.png",
+    "static/media/Amazon Clone.png": "/DevPortfolio/static/media/Amazon Clone.66f4d59c9a0184d71578.png",
+    "static/media/bg-home.png": "/DevPortfolio/static/media/bg-home.7db783e578f4d3dfabcb.png",
+    "static/media/Network-manager.png": "/DevPortfolio/static/media/Network-manager.09cafa49eaf0a2f6baa7.png",
+    "static/media/IMG_E5177.png": "/DevPortfolio/static/media/IMG_E5177.925d6b83641eb6264d24.png",
+    "static/media/AI-bot.jpg": "/DevPortfolio/static/media/AI-bot.37217d05ff69d1f0a1b6.jpg",
+    "static/media/clip-transparent-shapes-15.png": "/DevPortfolio/static/media/clip-transparent-shapes-15.90a6e09abb37221ce6d8.png",
+    "static/media/about-img-1.png": "/DevPortfolio/static/media/about-img-1.3aca97fd8dff3d8b3bab.png",
+    "static/media/ERP-website.png": "/DevPortfolio/static/media/ERP-website.99d172659858eec58dfd.png",
+    "static/media/Expence Tracker.png": "/DevPortfolio/static/media/Expence Tracker.24446d7be102ada11956.png",
+    "static/media/MedTrack.jpg": "/DevPortfolio/static/media/MedTrack.43294aade2740792a8f6.jpg",
+    "index.html": "/DevPortfolio/index.html",
+    "main.ed659a5f.css.map": "/DevPortfolio/static/css/main.ed659a5f.css.map",
+    "main.c2187248.js.map": "/DevPortfolio/static/js/main.c2187248.js.map",
+    "488.ee0639e6.chunk.js.map": "/DevPortfolio/static/js/488.ee0639e6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed659a5f.css",
+    "static/js/main.c2187248.js"
+  ]
+}
