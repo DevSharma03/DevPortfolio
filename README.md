@@ -28,13 +28,15 @@ Check out the live version: [DevPortfolio Live](https://devsharma03.github.io/De
 
 ```
 DevPortfolio/
-├── assets/            # Images and icons
-├── components/        # Reusable React components
-├── pages/             # Main sections of the portfolio
-├── styles/            # CSS and styling files
-├── public/            # Static files
-├── package.json       # Project metadata and dependencies
-└── README.md          # Project overview and instructions
+├── public/             # Static assets like images and icons
+├── src/                # Source code
+│   ├── components/     # Reusable React components
+│   ├── assets/         # Images and logo
+├── .gitignore          # Specifies files and directories to be ignored by Git
+├── package.json        # Project metadata and dependencies
+├── package-lock.json   # Exact versions of installed dependencies
+└── README.md           # Project overview and instructions
+
 ```
 
 ## 🚀 Getting Started
