@@ -68,16 +68,16 @@ const Contact = () => {
                             </div>
                         </div>
                         <div className="social-icons">
-                            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="icon-link icon-link-1">
+                            <a href="https://www.linkedin.com/in/devsharma09" target="_blank" rel="noopener noreferrer" className="icon-link icon-link-1">
                                 <FaLinkedin className="icon linkedin" />
                             </a>
-                            <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" className="icon-link icon-link-2">
+                            <a href="https://github.com/DevSharma03" target="_blank" rel="noopener noreferrer" className="icon-link icon-link-2">
                                 <FaGithub className="icon github" />
                             </a>
-                            <a href="mailto:hellosupport@gmail.com" target="_blank" rel="noopener noreferrer" className="icon-link icon-link-5">
+                            <a href="mailto:work.devashishsharma09@gmail.com" target="_blank" rel="noopener noreferrer" className="icon-link icon-link-5">
                                 <FaEnvelope className="icon email" />
                             </a>
-                            <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" className="icon-link icon-link-4">
+                            <a href="https://www.instagram.com/devsharma_1293" target="_blank" rel="noopener noreferrer" className="icon-link icon-link-4">
                                 <FaInstagram className="icon instagram" />
                             </a>
                         </div>

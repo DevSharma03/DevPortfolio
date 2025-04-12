@@ -14,9 +14,10 @@
 }
 
 /* Animated Heading (outside the card) */
-#skills-title {
-    width: 100%;
+.skills-title {
+    display: inline;
     text-align: center;
+    width: 100vw;
 }
 
 /* Blue Card */

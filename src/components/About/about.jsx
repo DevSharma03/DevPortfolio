@@ -5,7 +5,7 @@ export default function About() {
     return (
         <div id="about">
             <div className="about-container">
-                <div className="row">
+                <div className="row" style={{ margin: "0" }}>
                     <div className="skills-title">
                         ABOUT
                     </div>
