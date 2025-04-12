@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/DevPortfolio/static/css/main.62e4d099.css",
-    "main.js": "/DevPortfolio/static/js/main.e1c9028a.js",
+    "main.css": "/DevPortfolio/static/css/main.8d6e5801.css",
+    "main.js": "/DevPortfolio/static/js/main.846fb574.js",
     "static/js/488.ee0639e6.chunk.js": "/DevPortfolio/static/js/488.ee0639e6.chunk.js",
     "static/media/EventPro.png": "/DevPortfolio/static/media/EventPro.1b99416639a037316c0e.png",
     "static/media/Amazon Clone.png": "/DevPortfolio/static/media/Amazon Clone.66f4d59c9a0184d71578.png",
@@ -13,12 +13,12 @@
     "static/media/Expence Tracker.png": "/DevPortfolio/static/media/Expence Tracker.24446d7be102ada11956.png",
     "static/media/MedTrack.jpg": "/DevPortfolio/static/media/MedTrack.43294aade2740792a8f6.jpg",
     "index.html": "/DevPortfolio/index.html",
-    "main.62e4d099.css.map": "/DevPortfolio/static/css/main.62e4d099.css.map",
-    "main.e1c9028a.js.map": "/DevPortfolio/static/js/main.e1c9028a.js.map",
+    "main.8d6e5801.css.map": "/DevPortfolio/static/css/main.8d6e5801.css.map",
+    "main.846fb574.js.map": "/DevPortfolio/static/js/main.846fb574.js.map",
     "488.ee0639e6.chunk.js.map": "/DevPortfolio/static/js/488.ee0639e6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.62e4d099.css",
-    "static/js/main.e1c9028a.js"
+    "static/css/main.8d6e5801.css",
+    "static/js/main.846fb574.js"
   ]
 }
