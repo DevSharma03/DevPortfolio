@@ -1,6 +1,6 @@
 import React from "react";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPython, FaDatabase, FaGitAlt, FaGithub, FaCogs, FaJava, FaNodeJs, FaChartLine, FaBrain, FaRobot, FaLanguage, FaCode, FaTerminal, FaComment, FaCloud, FaLayerGroup, FaLink, FaNetworkWired , FaSync, FaUsers, FaLaptop } from "react-icons/fa";
-import { SiTailwindcss, SiDjango, SiMysql, SiMongodb, SiTensorflow, SiKeras, SiNumpy, SiPandas, SiExpress, SiBootstrap, SiPhp, SiR, SiSpringboot, SiScikitlearn } from "react-icons/si";
+import { SiTailwindcss, SiDjango, SiMysql, SiJupyter, SiPytorch, SiMongodb, SiOpencv, SiTypescript, SiNextdotjs, SiRedux, SiTensorflow, SiKeras, SiNumpy, SiPandas, SiExpress, SiBootstrap, SiPhp, SiR, SiSpringboot, SiScikitlearn } from "react-icons/si";
 import "./skills.css"; 
 
 export default function Skills() {
@@ -8,26 +8,21 @@ export default function Skills() {
         <div id="skills">
             <section className="skills-section">
                 <div className="skills-wrapper">
-                    {/* Animated Title */}
-                    <div id="skills-title" className="h2---section">
-                    <a href="#skills-title" className="h2-linkblock">
-                        <h2 className="h2---text">Ski</h2>
-                        <div className="h2---o work">
-                        <div className="title---eye-pupils work">L</div>
-                        </div>
-                        <h2 className="h2---text">ls</h2>
-                    </a>
-                    </div>
+                    <h1 className="skills-title">
+                        SKILLS
+                    </h1>
                     <p className="skills-subtext">Here are the technologies and tools I work with:</p>
-
-                    <SkillCategory title="Front-EnD">
+                    <SkillCategory title="Front-End">
                         <SkillItem icon={<FaHtml5 />} name="HTML" />
                         <SkillItem icon={<FaCss3Alt />} name="CSS" />
                         <SkillItem icon={<SiPhp />} name="PHP" />
                         <SkillItem icon={<FaJs />} name="JavaScript" />
                         <SkillItem icon={<FaReact />} name="React" />
-                        <SkillItem icon={<SiTailwindcss />} name="Tailwind" />
-                        <SkillItem icon={<SiBootstrap />} name="Bootstrap" /> 
+                        <SkillItem icon={<SiNextdotjs />} name="Next.js" />
+                        <SkillItem icon={<SiRedux />} name="Redux" />
+                        <SkillItem icon={<SiTailwindcss />} name="TailwindCSS" />
+                        <SkillItem icon={<SiBootstrap />} name="Bootstrap" />
+                        <SkillItem icon={<SiTypescript />} name="TypeScript" />
                     </SkillCategory>
                     <br />
                     <SkillCategory title="Back-End">
@@ -38,41 +33,44 @@ export default function Skills() {
                         <SkillItem icon={<SiExpress />} name="Express.js" />
                         <SkillItem icon={<SiDjango />} name="Django" />
                         <SkillItem icon={<SiSpringboot />} name="Spring Boot" />
-                        <SkillItem icon={<SiMysql />} name="MySQL" />
-                        <SkillItem icon={<FaDatabase />} name="SQL" />
-                        <SkillItem icon={<SiMongodb />} name="MongoDB" />
                         <SkillItem icon={<FaCogs />} name="RESTful API" />     
                     </SkillCategory>
                     <br />
-                    <SkillCategory title="Machine Learning">
-                        <SkillItem icon={<SiNumpy />} name="NumPy" />
-                        <SkillItem icon={<SiPandas />} name="Pandas" />
-                        <SkillItem icon={<FaChartLine />} name="MatplotLib" />
+                        <SkillCategory title="Machine Learning">
+                        <SkillItem icon={<SiPytorch />} name="PyTorch" />
+                        <SkillItem icon={<SiJupyter />} name="Jupyter Notebook" />
                         <SkillItem icon={<FaChartLine />} name="Seaborn" />
                         <SkillItem icon={<SiScikitlearn />} name="Scikit-Learn" />
                         <SkillItem icon={<SiTensorflow />} name="TensorFlow" />
                         <SkillItem icon={<SiKeras />} name="Keras" />
-                        <SkillItem icon={<FaRobot />} name="Gen AI" />
+                        <SkillItem icon={<SiOpencv />} name="OpenCV" />
                         <SkillItem icon={<FaBrain />} name="Deep Learning" />
                         <SkillItem icon={<FaLanguage />} name="NLP" />
+                        <SkillItem icon={<FaRobot />} name="Gen AI" />
                     </SkillCategory>
                     <br />
-                    <SkillCategory title="Version Control">
+                    <SkillCategory title="Data Science & Analytics">
+                        <SkillItem icon={<SiNumpy />} name="NumPy" />
+                        <SkillItem icon={<SiPandas />} name="Pandas" />
+                        <SkillItem icon={<FaChartLine />} name="MatplotLib" />
+                        <SkillItem icon={<FaLayerGroup />} name="Data Structure" />
+                        <SkillItem icon={<FaNetworkWired />} name="DSA" />
+                        <SkillItem icon={<FaCode />} name="OOP's" />
+                        <SkillItem icon={<SiMysql />} name="MySQL" />
+                        <SkillItem icon={<FaDatabase />} name="SQL" />
+                        <SkillItem icon={<SiMongodb />} name="MongoDB" />
+                    </SkillCategory>
+                    <br />
+                    <SkillCategory title="Tools & Platforms">
                         <SkillItem icon={<FaGitAlt />} name="Git" />
                         <SkillItem icon={<FaGithub />} name="GitHub" />
                         <SkillItem icon={<FaCode />} name="VS Code" />
                         <SkillItem icon={<FaTerminal />} name="IntelliJ IDEA" />
                         <SkillItem icon={<FaComment />} name="AI Tools" />
+                        <SkillItem icon={<FaCloud />} name="Cloud Computing (GCP)" />
                     </SkillCategory>
                     <br />
-                    <SkillCategory title="Software Development">
-                        <SkillItem icon={<FaLayerGroup />} name="Data Structure" />
-                        <SkillItem icon={<FaNetworkWired />} name="DSA" />
-                        <SkillItem icon={<FaCode />} name="OOP's" />
-                    </SkillCategory>
-                    <br />
-                    <SkillCategory title="Computer Related Skills">
-                        <SkillItem icon={<FaCloud />} name="Cloud Computing (AWS)" />
+                    <SkillCategory title="CS Fundamentals & Soft Skills">
                         <SkillItem icon={<FaLink />} name="Computer Networking" />
                         <SkillItem icon={<FaSync />} name="Adaptability" />
                         <SkillItem icon={<FaUsers />} name="Interpersonal Skills" />

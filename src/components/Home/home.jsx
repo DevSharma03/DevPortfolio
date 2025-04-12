@@ -1,7 +1,7 @@
 import { useState, useEffect, React } from 'react';
 import './home.css';
 import myImage from '../../assets/IMG_E5177.png';
-import { FaLinkedin, FaGithub, FaTwitter, FaInstagram, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
 
 
 const texts = ["Devashish Sharma.", "Skilled Web Developer.", "Skilled Machine Learning Developer.", "Persuing B.Tech In AI&DS."];
@@ -54,18 +54,15 @@ export default function Home() {
                                     <a className="icon-link icon-link-2" href="https://github.com/DevSharma03" target="_blank" rel="noopener noreferrer">
                                         <FaGithub className="icon github" />
                                     </a>
-                                    <a className="icon-link icon-link-3" href="/" target="_blank" rel="noopener noreferrer">
-                                        <FaTwitter className="icon twitter" />
+                                    <a className="icon-link icon-link-5" href="mailto:work.devashishsharma09@gmail.com">
+                                        <FaEnvelope className="icon email" />
                                     </a>
                                     <a className="icon-link icon-link-4" href="https://www.instagram.com/devsharma_1293" target="_blank" rel="noopener noreferrer">
                                         <FaInstagram className="icon instagram" />
                                     </a>
-                                    <a className="icon-link icon-link-5" href="mailto:work.devashishsharma09@gmail.com">
-                                        <FaEnvelope className="icon email" />
-                                    </a>
                                 </div>
                                 <div className="resume-button mt-2">
-                                    <a href="/resume.html" target="_blank" rel="noopener noreferrer">
+                                    <a href={`${process.env.PUBLIC_URL}/resume.html`} target="_blank" rel="noopener noreferrer">
                                         See My Resume
                                     </a>
                                 </div>

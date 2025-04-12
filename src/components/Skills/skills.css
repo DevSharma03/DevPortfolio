@@ -6,60 +6,20 @@
     position: relative;
 }
 
+.skills-title {
+    font-size: 60px;
+    font-weight: bold;
+    color: #1e293b;
+    margin-bottom: 20px;
+    font-style: oblique;
+    text-align: center;
+}
+
 /* Skills Wrapper */
 .skills-wrapper {
     max-width: 1250px; 
     margin: auto;
     position: relative;
-}
-
-/* Animated Main Heading */
-.h2---section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 40px;
-}
-
-.h2-linkblock {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #1e293b;
-    font-weight: bold;
-    font-size: 3.2rem;
-    position: relative;
-    transition: transform 0.3s ease-in-out;
-}
-
-.h2---text {
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: #1e293b;
-    transition: transform 0.3s ease;
-}
-
-.h2---o {
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: #4a90e2;
-    transition: transform 0.3s ease;
-}
-
-/* Animated "O" in Skills */
-.title---eye-pupils {
-    display: inline-block;
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: #225ea8;
-    transform: translateY(5px);
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Hover effect */
-.h2-linkblock:hover .title---eye-pupils {
-    transform: translateY(-5px);
 }
 
 /* Skill Categories Connected with Lines */
@@ -181,9 +141,6 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-    .h2---text, .title---eye-pupils {
-        font-size: 2.5rem;
-    }
     .category-title {
         font-size: 1.4rem;
     }
@@ -209,9 +166,6 @@
 }
 
 @media (max-width: 480px) {
-    .h2---text, .title---eye-pupils {
-        font-size: 2rem;
-    }
     .category-title {
         font-size: 1.2rem;
     }

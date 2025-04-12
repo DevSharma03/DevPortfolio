@@ -66,7 +66,7 @@ const projects = [
         image: AI_BotImage,
     },
     {
-        title: 'Expence Tracker',
+        title: 'Expense Tracker',
         description: 'An Expence Management And Tracking System.',
         techStack:"HTML, CSS, JavaScript, Bootstrap.",
         detailedDescription: 'Developed an expense tracker for managing income and expenses with interactive charts and real-time updates. Designed a responsive UI for seamless user experience, enabling efficient financial tracking and budgeting.',

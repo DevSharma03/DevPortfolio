@@ -47,22 +47,6 @@ body {
     text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Hover Effects for Logo */
-@keyframes logoPulse {
-    0% {
-        transform: scale(1);
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    50% {
-        transform: scale(1.1);
-        text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
-    }
-    100% {
-        transform: scale(1);
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    }
-}
-
 /* Navbar Links */
 #link-address {
     color: #333;

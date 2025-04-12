@@ -1,165 +1,161 @@
-/* About Section */
+/* Main About Section */
 #about {
-    padding: 70px 0;
-    position: relative;
+    padding: 80px 0 100px 0;
+    background-color: #f8f9fc;
 }
 
-/* About Container */
-.about-container {
-    max-width: 100%;
-    margin: auto;
-    padding: 0px 100px;
-}
-
-/* Row Flex Alignment */
+/* Row Flex Layout */
 .row {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* Left Section - Profile Image */
-.about-image {
-    position: relative;
-    flex: 0 0 50%;
-    display: flex;
+    gap: 20px;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
-/* Image Wrapper */
-.image-wrapper {
-    position: relative;
-    width: 550px;
-    height: 550px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Animated Heading (outside the card) */
+#skills-title {
+    width: 100%;
+    text-align: center;
 }
 
-/* Profile Image Wrapper with Background */
-.profile-image-wrapper {
-    position: relative;
-    width: 120%;
-    height: 120%;
-    background: url("../../assets/clip-transparent-shapes-15.png") no-repeat center center;
-    background-size: contain;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Blue Card */
+.about-card {
+    background-color: #e6f0ff;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.2);
+    padding: 30px;
+    transition: all 0.3s ease-in-out;
+    flex: 1 1 700px;
+    max-width: 1000px;
 }
 
-/* Profile Image */
-.profile-image-me {
-    width: 450px;
-    height: 450px;
-    object-fit: contain;
-    position: relative;
-    top: -10px !important;
+.about-card:hover {
+    background-color: #d6eaff;
+    transform: translateY(-6px);
 }
 
-/* Right Section - About Text */
+/* About Text Inside the Card */
 .about-text {
-    flex: 0 0 50%;
-    padding: 25px 40px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 14px;
 }
 
-/* About Title */
+/* Title inside the card */
 .about-title {
     font-size: 36px;
     font-weight: 700;
     color: #2e3d48;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-/* Highlighted Text */
+/* Paragraph Text */
+.about-text p {
+    font-size: 18px;
+    color: #444;
+    line-height: 25px;
+}
+
+/* Highlight Text */
 .highlight {
     color: #007bff;
     font-weight: bold;
 }
 
-/* Connect Me Button */
+/* Resume/Connect Button */
 .resume-button {
-    width: 250px;
-    padding: 12px 24px;
+    width: fit-content;
+    padding: 12px 28px;
     background-color: #007bff;
     color: white;
     font-size: 18px;
     font-weight: bold;
-    border: none;
     border-radius: 8px;
-    cursor: pointer;
-    text-decoration: none;
     transition: background-color 0.3s ease;
-    text-align: center;
+    cursor: pointer;
 }
 
-.connect-me-btn:hover {
+.resume-button a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.resume-button:hover {
     background-color: #0056b3;
 }
 
-/* Responsive Design */
+
+/* Tablet View */
 @media (max-width: 1024px) {
-    .row {
-        flex-direction: column;
+    .about-container {
+        padding: 0 20px;
+    }
+
+    .about-card {
+        padding: 20px;
+    }
+
+    .about-title {
+        font-size: 30px;
+    }
+
+    .about-text p {
+        font-size: 17px;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 0 20px;
+        margin: 0 10px;
+    }
+
+    .about-card {
+        padding: 20px;
+        margin: 0 15px;
+    }
+
+    .about-title {
+        font-size: 26px;
         text-align: center;
     }
 
-    .image-wrapper {
-        width: 450px;
-        height: 450px;
+    .about-text p {
+        font-size: 14px;
     }
 
-    .profile-image-me {
-        width: 320px;
-        height: 320px;
-    }
-}
-
-@media (max-width: 768px) {
-    .about-container {
-        max-width: 100%;
-        margin: auto;
-        padding: 0px 20px;
-    }
-
-    .image-wrapper {
-        width: 500px;
-        height: 500px;
-    }
-
-    .profile-image-me {
-        width: 260px;
-        height: 280px;
-    }
-
-    .connect-me-btn {
+    .resume-button {
         font-size: 16px;
         padding: 10px 20px;
+        margin: 0 auto;
     }
 }
 
+/* Very Small Devices */
 @media (max-width: 480px) {
-    .about-text{
-        align-items: center;
+    #about {
+        padding: 60px 0;
     }
 
-    .image-wrapper {
-        width: 450px;
-        height: 450px;
+    .about-card {
+        padding: 20px;
     }
 
-    .profile-image-me {
-        width: 260px;
-        height: 280px;
+    .about-title {
+        font-size: 22px;
     }
 
-    .connect-me-btn {
+    .about-text p {
+        font-size: 15px;
+    }
+
+    .resume-button {
         font-size: 14px;
         padding: 8px 16px;
     }
 }
+
+
