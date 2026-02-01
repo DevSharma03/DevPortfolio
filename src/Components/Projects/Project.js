@@ -14,7 +14,7 @@ function Projects() {
           <div className="project-card-inner">
             <div className="project-card-front">
               <img
-                src={`${process.env.PUBLIC_URL}/Project_Images/pMain.png`}
+                src={`${process.env.PUBLIC_URL}/Project_Images/pMain.jpeg`}
                 alt="Project 1"
               />
               <div className="project-details">
@@ -104,7 +104,7 @@ function Projects() {
           <div className="project-card-inner">
             <div className="project-card-front">
               <img
-                src={`${process.env.PUBLIC_URL}/Project_Images/pMain2.png`}
+                src={`${process.env.PUBLIC_URL}/Project_Images/p1.png`}
                 alt="Project 3"
               />
               <div className="project-details">
@@ -184,7 +184,7 @@ function Projects() {
           <div className="project-card-inner">
             <div className="project-card-front">
               <img
-                src={`${process.env.PUBLIC_URL}/Project_Images/p4.png`}
+                src={`${process.env.PUBLIC_URL}/Project_Images/p3.png`}
                 alt="Project 5"
               />
               <div className="project-details">
