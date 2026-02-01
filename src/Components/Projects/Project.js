@@ -13,7 +13,10 @@ function Projects() {
         <div className="project-card">
           <div className="project-card-inner">
             <div className="project-card-front">
-              <img src="/Project_Images/pMain.jpeg" alt="Project 2" />
+              <img
+  src={`${process.env.PUBLIC_URL}/Project_Images/pMain.jpeg`}
+  alt="Project 1"
+/>
               <div className="project-details">
                 <h3>Life Sync</h3>
                 <p style={{ fontSize: 18 }}>
@@ -57,7 +60,10 @@ function Projects() {
         <div className="project-card">
           <div className="project-card-inner">
             <div className="project-card-front">
-              <img src="/Project_Images/pMain2.png" alt="Project 2" />
+              <img
+  src={`${process.env.PUBLIC_URL}/Project_Images/pMain2.jpeg`}
+  alt="Project 2"
+/>
               <div className="project-details">
                 <h3>Credit Score Prediction System</h3>
                 <p style={{ fontSize: 18 }}>Credit Scoring Model</p>
@@ -97,7 +103,10 @@ function Projects() {
         <div className="project-card">
           <div className="project-card-inner">
             <div className="project-card-front">
-              <img src="/Project_Images/p1.png" alt="Project 2" />
+              <img
+  src={`${process.env.PUBLIC_URL}/Project_Images/pMain2.jpeg`}
+  alt="Project 3"
+/>
               <div className="project-details">
                 <h3>SIA 2.0</h3>
                 <p style={{ fontSize: 18 }}>
@@ -129,7 +138,10 @@ function Projects() {
         <div className="project-card">
           <div className="project-card-inner">
             <div className="project-card-front">
-              <img src="/Project_Images/p2.png" alt="Project 2" />
+              <img
+  src={`${process.env.PUBLIC_URL}/Project_Images/p2.jpeg`}
+  alt="Project 4"
+/>
               <div className="project-details">
                 <h3>ATS Resume Analyzer</h3>
                 <p style={{ fontSize: 18 }}>
@@ -171,7 +183,10 @@ function Projects() {
         <div className="project-card">
           <div className="project-card-inner">
             <div className="project-card-front">
-              <img src="/Project_Images/p3.png" alt="Project 2" />
+              <img
+  src={`${process.env.PUBLIC_URL}/Project_Images/p4.jpeg`}
+  alt="Project 5"
+/>
               <div className="project-details">
                 <h3>Network Analysis Tool</h3>
                 <p style={{ fontSize: 18 }}>
@@ -213,7 +228,10 @@ function Projects() {
         <div className="project-card">
           <div className="project-card-inner">
             <div className="project-card-front">
-              <img src="/Project_Images/p4.png" alt="Project 1" />
+              <img
+  src={`${process.env.PUBLIC_URL}/Project_Images/p4.jpeg`}
+  alt="Project 6"
+/>
               <div className="project-details">
                 <h3>Portfolio Website</h3>
                 <p style={{ fontSize: 18 }}>
@@ -253,7 +271,10 @@ function Projects() {
         <div className="project-card">
           <div className="project-card-inner">
             <div className="project-card-front">
-              <img src="/Project_Images/p5.png" alt="Project 2" />
+              <img
+  src={`${process.env.PUBLIC_URL}/Project_Images/p5.jpeg`}
+  alt="Project 7"
+/>
               <div className="project-details">
                 <h3>ERP Platform</h3>
                 <p style={{ fontSize: 18 }}>

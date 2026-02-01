@@ -42,17 +42,23 @@ const Experience = () => {
         <div className="experience-grid">
           {workExperience.map((exp) => (
             <div key={exp.id} className="experience-card">
-              <div className="experience-icon-wrapper"> {/* New wrapper for image spacing */}
+              <div className="experience-icon-wrapper">
+                {" "}
+                {/* New wrapper for image spacing */}
                 <img
-                  src={exp.thumbnail}
+                  src={`${process.env.PUBLIC_URL}/exp.thumbnail`}
                   alt={exp.title}
                   className="experience-icon"
                 />
               </div>
               <div className="experience-text">
                 <h2>{exp.title}</h2>
-                <p className="experience-company">{exp.company} - {exp.place}</p> {/* New: Company & Place */}
-                <p className="experience-duration">{exp.duration}</p> {/* New: Duration */}
+                <p className="experience-company">
+                  {exp.company} - {exp.place}
+                </p>{" "}
+                {/* New: Company & Place */}
+                <p className="experience-duration">{exp.duration}</p>{" "}
+                {/* New: Duration */}
                 <p>{exp.desc}</p>
               </div>
             </div>
@@ -64,5 +70,3 @@ const Experience = () => {
 };
 
 export default Experience;
-
-
