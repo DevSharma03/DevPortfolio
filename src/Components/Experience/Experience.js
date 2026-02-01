@@ -46,7 +46,7 @@ const Experience = () => {
                 {" "}
                 {/* New wrapper for image spacing */}
                 <img
-                  src={`${process.env.PUBLIC_URL}/exp.thumbnail`}
+                  src={`${process.env.PUBLIC_URL}${exp.thumbnail}`}
                   alt={exp.title}
                   className="experience-icon"
                 />
