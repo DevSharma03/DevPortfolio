@@ -1,0 +1,335 @@
+#Work_Experience {
+  margin-top: 50px;
+}
+
+/* Container */
+.experience-container {
+  padding: 80px 100px;
+  text-align: center;
+  color: white;
+  box-sizing: border-box;
+}
+
+/* Heading */
+.experience-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.experience-heading span {
+  color: #c084fc;
+}
+
+/* Grid Layout - Default to a single column for mobile */
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column for small screens */
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Two-column layout for screens wider than 768px */
+@media (min-width: 768px) {
+  .experience-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    /* Add this to center the last item if there's an odd number */
+    justify-items: center;
+  }
+
+  /* Specific style for the last card to occupy full width if it's the only one in its row */
+  .experience-grid > :nth-last-child(1):nth-child(odd) {
+    grid-column: 1 / -1; /* Make the last odd child span both columns */
+    max-width: 50%; /* Adjust max-width to visually center it */
+    width: 100%; /* Ensure it takes available space */
+  }
+  /* If there are an odd number of items, and the last one needs to be centered,
+     the above rule is for the scenario where it's the only one on its row.
+     If there are 3 items, the 3rd item will naturally align to the left in a 2-col grid.
+     We need to explicitly center it. */
+  .experience-grid
+    > :nth-last-child(1):nth-child(odd):last-child:not(:nth-last-child(2)) {
+    margin: 0 auto; /* Center it horizontally */
+  }
+}
+
+/* Card */
+.experience-card {
+  background: linear-gradient(145deg, #111428, #0d0f1f);
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  align-items: flex-start; /* Align items to the start for better text flow */
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Hover effect for the card */
+.experience-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 10px 25px rgba(192, 132, 252, 0.2);
+}
+
+/* Animated RGB Border (always visible) */
+.experience-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  padding: 2px; /* Border thickness */
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #002bff,
+    #7a00ff,
+    #ff00c8
+  );
+  background-size: 400% 400%;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  animation: moveGradient 5s linear infinite;
+  transition: background 0.3s ease;
+}
+
+/* Hover effect for the border */
+.experience-card:hover::before {
+  animation: none; /* Stop gradient movement */
+  background: #c084fc; /* Solid purple border */
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Icon Wrapper for increased spacing */
+.experience-icon-wrapper {
+  padding: 15px; /* Increase padding around the image */
+  border-radius: 10px;
+  display: flex; /* Use flex to center the icon if needed */
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Prevent wrapper from shrinking */
+  margin-right: 10px; /* Space between icon wrapper and text */
+}
+
+/* Icon */
+.experience-icon {
+  width: 100px; /* Slightly smaller icon to accommodate wrapper padding */
+  height: 100px;
+  object-fit: contain;
+}
+
+/* Text Container */
+.experience-text {
+  text-align: left;
+  flex-grow: 1; /* Allow text to take remaining space */
+}
+
+.experience-text h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 5px 0; /* Adjusted margin */
+}
+
+.experience-text .experience-company,
+.experience-text .experience-duration {
+  font-size: 0.85rem; /* Smaller font for meta info */
+  color: #9ca3af; /* A slightly lighter grey */
+  margin: 0 0 5px 0;
+  line-height: 1.2;
+}
+
+.experience-text p {
+  font-size: 0.95rem;
+  margin-top: 10px; /* Increased margin for description */
+  color: #d1d5db;
+  line-height: 1.5;
+}
+
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
+
+/* Mobile: Small phones (< 480px) */
+@media (max-width: 479px) {
+  .experience-container {
+    padding: 40px 15px;
+  }
+
+  .experience-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .experience-grid {
+    gap: 1.5rem;
+  }
+
+  .experience-card {
+    padding: 15px;
+    gap: 12px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .experience-icon-wrapper {
+    padding: 10px;
+    margin-right: 0;
+  }
+
+  .experience-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .experience-text {
+    text-align: center;
+  }
+
+  .experience-text h2 {
+    font-size: 1rem;
+  }
+
+  .experience-text .experience-company,
+  .experience-text .experience-duration {
+    font-size: 0.75rem;
+  }
+
+  .experience-text p {
+    font-size: 0.85rem;
+    margin-top: 8px;
+  }
+}
+
+/* Mobile: Medium phones (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  .experience-container {
+    padding: 50px 20px;
+  }
+
+  .experience-heading {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .experience-grid {
+    gap: 2rem;
+  }
+
+  .experience-card {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .experience-icon-wrapper {
+    padding: 12px;
+    margin-right: 12px;
+  }
+
+  .experience-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .experience-text h2 {
+    font-size: 1.1rem;
+  }
+
+  .experience-text .experience-company,
+  .experience-text .experience-duration {
+    font-size: 0.8rem;
+  }
+
+  .experience-text p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .experience-container {
+    padding: 60px 40px;
+  }
+
+  .experience-heading {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .experience-grid {
+    gap: 2.5rem;
+  }
+
+  .experience-card {
+    padding: 25px;
+    gap: 18px;
+  }
+
+  .experience-icon-wrapper {
+    padding: 13px;
+    margin-right: 12px;
+  }
+
+  .experience-icon {
+    width: 90px;
+    height: 90px;
+  }
+
+  .experience-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .experience-text .experience-company,
+  .experience-text .experience-duration {
+    font-size: 0.83rem;
+  }
+
+  .experience-text p {
+    font-size: 0.93rem;
+  }
+}
+
+/* Desktop (1024px and above) */
+@media (min-width: 1024px) {
+  .experience-container {
+    padding: 80px 100px;
+  }
+
+  .experience-heading {
+    font-size: 2.5rem;
+  }
+
+  .experience-card {
+    padding: 30px;
+  }
+
+  .experience-icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .experience-text h2 {
+    font-size: 1.25rem;
+  }
+}

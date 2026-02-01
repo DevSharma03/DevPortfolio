@@ -1,0 +1,116 @@
+.navbar-container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  transition: top 0.3s ease; /* smooth slide effect */
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.navbar-box {
+  backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  padding: 20px 50px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  gap: 30px;
+  box-shadow: 10px 4px 10px 5px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Optional: shadow on scroll up for better visibility */
+.navbar-container.show-shadow .navbar-box {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.Navbar-Routes {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.Navbar-Routes:hover {
+  color: #85888a;
+}
+
+/* Mobile: Small phones (< 480px) */
+@media (max-width: 479px) {
+  .navbar-container {
+    top: 10px;
+    padding: 0 10px;
+  }
+
+  .navbar-box {
+    padding: 12px 15px;
+    border-radius: 8px;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .Navbar-Routes {
+    font-size: 11px;
+    white-space: normal;
+  }
+}
+
+/* Mobile: Medium phones (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  .navbar-container {
+    top: 15px;
+    padding: 0 12px;
+  }
+
+  .navbar-box {
+    padding: 15px 20px;
+    border-radius: 10px;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .Navbar-Routes {
+    font-size: 12px;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .navbar-container {
+    top: 20px;
+    padding: 0 20px;
+  }
+
+  .navbar-box {
+    padding: 18px 35px;
+    border-radius: 11px;
+    gap: 20px;
+  }
+
+  .Navbar-Routes {
+    font-size: 14px;
+  }
+}
+
+/* Desktop (1024px and above) */
+@media (min-width: 1024px) {
+  .navbar-box {
+    padding: 20px 50px;
+    gap: 30px;
+  }
+
+  .Navbar-Routes {
+    font-size: 16px;
+  }
+}

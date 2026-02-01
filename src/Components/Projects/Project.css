@@ -1,0 +1,387 @@
+/* 🔹 Projects Section */
+#Projects {
+  padding: 80px 0;
+}
+
+/* 🔹 Title */
+.projects-title {
+  color: white;
+  text-align: center;
+  font-size: 56px;
+  font-weight: 700;
+  padding-bottom: 70px;
+}
+
+.projects-title-part {
+  color: rgb(203 172 249);
+}
+
+/* 🔹 Project List Layout */
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* 🔹 Flip Card Wrapper */
+.project-card {
+  position: relative;
+  width: 450px;
+  height: 520px;
+  perspective: 1200px; /* Depth effect */
+  text-decoration: none;
+}
+
+/* 🔹 Flip Card Inner */
+.project-card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+  border: 1px solid rgba(163, 166, 170, 0.3);
+  border-radius: 16px;
+}
+
+.project-card:hover .project-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* 🔹 Shared Face Styles */
+.project-card-front,
+.project-card-back {
+  position: absolute;
+  color: white;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+/* 🔹 Front Face */
+.project-card-front {
+  background: rgba(24, 29, 70, 0.7);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card-front img {
+  width: 100%;
+  height: 350px;
+  padding: 10px;
+  object-fit: fill;
+  border-radius: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card-front:hover img {
+  transform: scale(1.1);
+}
+
+/* 🔹 Front Details */
+.project-details {
+  padding: 40px 30px;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.project-details h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 5px;
+}
+
+.project-details p {
+  font-size: 15px;
+  color: #b9bac4;
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* 🔹 Back Face */
+.project-card-back {
+  background: rgb(24, 29, 70);
+  background-image: url(../../Assets/bg-home.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 8px 24px rgba(0, 123, 255, 0.3);
+  transform: rotateY(180deg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(163, 166, 170, 0.3);
+}
+
+.project-card:hover .project-card-back {
+  box-shadow: 0 12px 30px rgba(0, 123, 255, 0.5);
+}
+
+/* 🔹 Back Content */
+.project-card-back .project-name {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.project-card-back .project-description {
+  font-size: 18px;
+  color: #999999;
+  margin-bottom: 15px;
+  text-align: left;
+  flex-grow: 1;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.project-card-back .teckStack {
+  font-size: 16px;
+  margin-top: 5px;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+
+.teckStack-title {
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+/* 🔹 Overlay (View Project) */
+.overlay {
+  text-align: center;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.overlay span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #007bff;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  margin-bottom: 8px;
+}
+
+.project-card:hover .overlay span {
+  opacity: 1;
+}
+
+.overlay a {
+  text-decoration: none;
+  padding: 10px 18px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  transition:
+    background-color 0.3s ease-in-out,
+    transform 0.2s ease-in-out;
+}
+
+.overlay a:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
+
+/* Mobile: Small phones (< 480px) */
+@media (max-width: 479px) {
+  #Projects {
+    padding: 40px 0;
+  }
+
+  .projects-title {
+    font-size: 28px;
+    padding-bottom: 30px;
+  }
+
+  .projects-list {
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 330px;
+    height: 380px;
+  }
+
+  .project-card-front img {
+    height: 200px;
+  }
+
+  .project-details {
+    padding: 20px 20px;
+  }
+
+  .project-details h3 {
+    font-size: 18px;
+  }
+
+  .project-details p {
+    font-size: 12px;
+  }
+
+  .project-card-back .project-name {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .project-card-back .project-description {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .project-card-back .teckStack {
+    font-size: 12px;
+  }
+
+  .teckStack-title {
+    font-size: 12px;
+  }
+
+  .overlay span {
+    font-size: 12px;
+  }
+
+  .overlay a {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile: Medium phones (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  #Projects {
+    padding: 50px 0;
+  }
+
+  .projects-title {
+    font-size: 36px;
+    padding-bottom: 40px;
+  }
+
+  .projects-list {
+    gap: 25px;
+    padding: 0 15px;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 320px;
+    height: 400px;
+  }
+
+  .project-card-front img {
+    height: 240px;
+  }
+
+  .project-details {
+    padding: 25px 20px;
+    margin-bottom: 15px;
+  }
+
+  .project-details h3 {
+    font-size: 20px;
+  }
+
+  .project-details p {
+    font-size: 13px;
+  }
+
+  .project-card-back .project-name {
+    font-size: 24px;
+  }
+
+  .project-card-back .project-description {
+    font-size: 15px;
+  }
+
+  .project-card-back .teckStack {
+    font-size: 14px;
+  }
+
+  .overlay a {
+    padding: 9px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #Projects {
+    padding: 60px 0;
+  }
+
+  .projects-title {
+    font-size: 44px;
+    padding-bottom: 50px;
+  }
+
+  .projects-list {
+    gap: 28px;
+    padding: 0 20px;
+    justify-content: center;
+  }
+
+  .project-card {
+    width: 340px;
+    height: 420px;
+  }
+
+  .project-card-front img {
+    height: 280px;
+  }
+
+  .project-details h3 {
+    font-size: 22px;
+  }
+
+  .project-details p {
+    font-size: 14px;
+  }
+
+  .project-card-back .project-name {
+    font-size: 26px;
+  }
+
+  .project-card-back .project-description {
+    font-size: 16px;
+  }
+
+  .project-card-back .teckStack {
+    font-size: 15px;
+  }
+}
+
+/* Desktop (1024px and above) */
+@media (min-width: 1024px) {
+  #Projects {
+    padding: 80px 0;
+  }
+
+  .projects-list {
+    padding: 0 20px;
+  }
+
+  .project-card {
+    width: 450px;
+    height: 520px;
+  }
+}
