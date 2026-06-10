@@ -10,11 +10,8 @@ const MagneticElement = ({ children, className = "", strength = 0.2 }) => {
 
   const handleMouse = (e) => {
     const { clientX, clientY } = e;
-
     const { height, width, left, top } = ref.current.getBoundingClientRect();
-
     const middleX = clientX - (left + width / 2);
-
     const middleY = clientY - (top + height / 2);
 
     setPosition({
@@ -38,7 +35,6 @@ const MagneticElement = ({ children, className = "", strength = 0.2 }) => {
       className={className}
       style={{
         transform: `translate(${position.x}px, ${position.y}px)`,
-
         transition: "transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
       }}
     >

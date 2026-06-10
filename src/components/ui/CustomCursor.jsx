@@ -23,17 +23,14 @@ const CustomCursor = () => {
         e.target.closest(".project-row") ||
         e.target.closest("input") ||
         e.target.closest("textarea");
-
       setIsHovering(!!isInteractable);
     };
 
     window.addEventListener("mousemove", updateCursor);
-
     window.addEventListener("mouseover", updateHover);
 
     return () => {
       window.removeEventListener("mousemove", updateCursor);
-
       window.removeEventListener("mouseover", updateHover);
     };
   }, []);
@@ -43,9 +40,7 @@ const CustomCursor = () => {
       className="fixed top-0 left-0 pointer-events-none z-[9999] mix-blend-difference transition-all duration-300 ease-out hidden md:flex items-center justify-center"
       style={{
         transform: `translate3d(${pos.x - (isHovering ? 40 : 8)}px, ${pos.y - (isHovering ? 40 : 8)}px, 0)`,
-
         width: isHovering ? "80px" : "16px",
-
         height: isHovering ? "80px" : "16px",
       }}
     >

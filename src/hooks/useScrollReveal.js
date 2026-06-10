@@ -1,12 +1,7 @@
-import {
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { useEffect, useRef, useState } from "react";
 
 const useScrollReveal = (threshold = 0.15) => {
-  const [isVisible, setIsVisible] =
-    useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const domRef = useRef();
 
@@ -16,24 +11,28 @@ const useScrollReveal = (threshold = 0.15) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsVisible(true);
-
             observer.unobserve(entry.target);
           }
         });
       },
-
       {
         threshold,
         rootMargin: "0px 0px -50px 0px",
-      }
+      },
     );
 
-    if (domRef.current)
-      observer.observe(domRef.current);
+    const currentElement = domRef.current;
+
+    if (currentElement) {
+      observer.observe(currentElement);
+    }
 
     return () => {
-      if (domRef.current)
-        observer.unobserve(domRef.current);
+      if (currentElement) {
+        observer.unobserve(currentElement);
+      }
+
+      observer.disconnect();
     };
   }, [threshold]);
 
