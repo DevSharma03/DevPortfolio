@@ -45,7 +45,7 @@ const Hero = () => {
             strength={0.4}
           >
             <a
-              href="https://drive.google.com/file/d/1igPckjFLiUZDzLDGPZFd0vNOC2byh3T3/view?usp=sharing"
+              href="https://drive.google.com/file/d/1k23NKFK2P2oAkCaCBNS278CM2XuNT_yK/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="w-24 h-24 md:w-32 md:h-32 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:text-black hover:bg-[#ccff00] hover:border-[#ccff00] transition-all duration-500 group overflow-hidden relative"
